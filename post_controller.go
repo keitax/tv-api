@@ -17,13 +17,13 @@ func NewPostController(postService PostService) PostController {
 }
 
 func (pc *postController) GetList(start int, results int) ([]*Post, error) {
-	return nil, nil
+	return pc.postService.GetList(start, results)
 }
 
 func (pc *postController) GetSingle(id string) (*Post, error) {
-	return nil, nil
+	return pc.postService.GetSingle(id)
 }
 
 func (pc *postController) Synchronize() error {
-	return nil
+	return pc.postService.Synchronize()
 }
